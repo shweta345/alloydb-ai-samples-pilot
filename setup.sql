@@ -64,9 +64,23 @@ CALL google_ml.create_sm_secret(
 );
 
 -- Create fake header function to bypass secret manager call in ml-agent
+-- Batch version (called by batch_array_async)
 CREATE OR REPLACE FUNCTION google_ml.fake_gemini_headers(
     model_id character varying,
     prompts text[],
+    generation_config json,
+    system_instructions json
+)
+RETURNS json
+LANGUAGE sql
+AS $$
+  SELECT '{"Authorization": "FakeToken"}'::json;
+$$;
+
+-- Scalar version (called by llm_expr)
+CREATE OR REPLACE FUNCTION google_ml.fake_gemini_headers(
+    model_id character varying,
+    prompt text,
     generation_config json,
     system_instructions json
 )
