@@ -63,3 +63,5 @@ jobs:
     - name: Run Tests
       run: |
         docker exec -i alloydb-omni psql -U postgres -d postgres < test_work_with_embeddings.sql
+        docker exec -i alloydb-omni psql -U postgres -d postgres < test_ai_operators.sql
+

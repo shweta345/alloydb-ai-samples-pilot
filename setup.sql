@@ -6,6 +6,7 @@ CREATE EXTENSION IF NOT EXISTS vector CASCADE;
 ALTER SYSTEM SET google_ml_integration.enable_ai_query_engine = ON;
 ALTER SYSTEM SET google_ml_integration.enable_model_support = ON;
 ALTER SYSTEM SET google_ml_integration.allow_http_endpoints = ON;
+ALTER SYSTEM SET google_ml_integration.enable_preview_ai_functions = ON;
 SELECT PG_RELOAD_CONF();
 
 -- Register mock models pointing to the mock server
@@ -55,3 +56,15 @@ CALL google_ml.create_model(
     model_in_transform_fn => 'google_ml.openai_text_embedding_input_transform',
     model_out_transform_fn => 'google_ml.openai_text_embedding_output_transform'
 );
+
+-- Register gemini-2.5-flash-lite mock
+CALL google_ml.create_model(
+    model_id => 'gemini-2.5-flash-lite',
+    model_request_url => 'http://host.docker.internal:8080/vertexai/gemini-2.5-flash-lite',
+    model_provider => 'custom',
+    model_type => 'llm',
+    model_auth_type => NULL,
+    model_in_transform_fn => 'google_ml.gemini_llm_input_transform',
+    model_out_transform_fn => 'google_ml.gemini_llm_output_transform'
+);
+

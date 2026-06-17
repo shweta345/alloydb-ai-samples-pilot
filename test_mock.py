@@ -72,6 +72,60 @@ def test_mock_server():
         httpd.shutdown()
         return
 
+    print("\nTesting POST /vertexai/gemini-2.5-flash-lite (scalar)...")
+    try:
+        req_data = json.dumps({
+            "contents": [
+                {
+                    "role": "user",
+                    "parts": [
+                        {
+                            "text": "Is apple a fruit or a vegetable?"
+                        }
+                    ]
+                }
+            ]
+        }).encode('utf-8')
+        req = urllib.request.Request("http://localhost:8080/vertexai/gemini-2.5-flash-lite", data=req_data, headers={'Content-Type': 'application/json'})
+        response = urllib.request.urlopen(req)
+        resp_data = json.loads(response.read().decode('utf-8'))
+        print(f"POST Response: {json.dumps(resp_data)}")
+        assert "candidates" in resp_data
+        assert resp_data["candidates"][0]["content"]["parts"][0]["text"] == "fruit"
+    except Exception as e:
+        print(f"POST Gemini LLM Scalar Failed: {e}")
+        httpd.shutdown()
+        return
+
+    print("\nTesting POST /vertexai/gemini-2.5-flash-lite (batch)...")
+    try:
+        req_data = json.dumps({
+            "contents": {
+                "role": "user",
+                "parts": [
+                    {
+                        "text": "1: Is apple a fruit?"
+                    },
+                    {
+                        "text": "2: Is carrot a fruit?"
+                    }
+                ]
+            }
+        }).encode('utf-8')
+        req = urllib.request.Request("http://localhost:8080/vertexai/gemini-2.5-flash-lite", data=req_data, headers={'Content-Type': 'application/json'})
+        response = urllib.request.urlopen(req)
+        resp_data = json.loads(response.read().decode('utf-8'))
+        print(f"POST Response: {json.dumps(resp_data)}")
+        assert "candidates" in resp_data
+        resp_text = resp_data["candidates"][0]["content"]["parts"][0]["text"]
+        resp_list = json.loads(resp_text)
+        print(f"Parsed response list: {resp_list}")
+        assert resp_list == ["true", "false"]
+    except Exception as e:
+        print(f"POST Gemini LLM Batch Failed: {e}")
+        httpd.shutdown()
+        return
+
     print("\nAll tests passed!")
     httpd.shutdown()
 
