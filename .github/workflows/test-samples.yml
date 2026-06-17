@@ -20,7 +20,7 @@ jobs:
 
     - name: Start Mock Server
       run: |
-        python3 mock_server.py &
+        python3 mock_server.py > mock_server.log 2>&1 &
         # Wait for mock server to be up
         until curl -s http://localhost:8080/ > /dev/null; do
           echo "Waiting for mock server..."
@@ -65,3 +65,12 @@ jobs:
         docker exec -i alloydb-omni psql -U postgres -d postgres < test_work_with_embeddings.sql
         docker exec -i alloydb-omni psql -U postgres -d postgres < test_ai_operators.sql
 
+    - name: Print Mock Server Logs
+      if: always()
+      run: |
+        if [ -f mock_server.log ]; then
+          echo "=== Mock Server Logs ==="
+          cat mock_server.log
+        else
+          echo "Mock server log file not found."
+        fi
