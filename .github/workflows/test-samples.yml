@@ -1,0 +1,52 @@
+name: Test SQL Code Samples
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Start Mock Server
+      run: |
+        python3 mock_server.py &
+        # Wait for mock server to be up
+        until curl -s http://localhost:8080/ > /dev/null; do
+          echo "Waiting for mock server..."
+          sleep 1
+        done
+        echo "Mock server is up!"
+
+    - name: Start AlloyDB Omni
+      run: |
+        docker run --name alloydb-omni \
+          --add-host=host.docker.internal:host-gateway \
+          -e POSTGRES_PASSWORD=postgres \
+          -p 5432:5432 \
+          -d gcr.io/alloydb-omni/pg15:latest
+        
+        # Wait for DB to be ready
+        until docker exec alloydb-omni pg_isready -U postgres; do
+          echo "Waiting for AlloyDB Omni..."
+          sleep 2
+        done
+        echo "AlloyDB Omni is ready!"
+
+    - name: Run Setup
+      run: |
+        docker exec -i alloydb-omni psql -U postgres -d postgres < setup.sql
+
+    - name: Run Tests
+      run: |
+        docker exec -i alloydb-omni psql -U postgres -d postgres < test_work_with_embeddings.sql
