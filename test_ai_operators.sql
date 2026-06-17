@@ -1,5 +1,7 @@
 -- Test AI Operators
 
+SELECT * FROM ai.model_info_view;
+
 -- Scalar tests
 SELECT 'SCALAR TESTS' as test_section;
 

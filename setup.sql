@@ -65,6 +65,96 @@ CALL google_ml.create_model(
     model_type => 'llm',
     model_auth_type => NULL,
     model_in_transform_fn => 'google_ml.gemini_llm_input_transform',
-    model_out_transform_fn => 'google_ml.gemini_llm_output_transform'
+    model_out_transform_fn => 'google_ml.gemini_llm_output_transform',
+    model_batch_in_transform_fn => 'google_ml.gemini_llm_batch_input_transform',
+    model_batch_out_transform_fn => 'google_ml.gemini_llm_batch_output_transform'
 );
+
+-- Override ai schema functions to default model_id to 'gemini-2.5-flash-lite'
+-- This avoids PrivateKeyFileError in mock environment when model_id is omitted.
+
+-- ai.generate overrides
+CREATE OR REPLACE FUNCTION ai.generate(prompts text[], batch_size integer DEFAULT NULL, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS text[]
+ LANGUAGE sql
+ IMMUTABLE PARALLEL SAFE COST 2e+08
+AS $function$
+    SELECT google_ml.inc_call_count_impl(20);
+    SELECT google_ml.generate(prompts => prompts, batch_size => batch_size, model_id => model_id);
+$function$;
+
+CREATE OR REPLACE FUNCTION ai.generate(prompt text, input_cursor refcursor, batch_size integer DEFAULT NULL, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS refcursor
+ LANGUAGE sql
+ COST 2e+08
+AS $function$
+      SELECT google_ml.inc_call_count_impl(20);
+      SELECT google_ml.generate(prompt => prompt, input_cursor => input_cursor, batch_size => batch_size, model_id => model_id);
+$function$;
+
+CREATE OR REPLACE FUNCTION ai.generate(prompt text, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS text
+ LANGUAGE sql
+ IMMUTABLE PARALLEL SAFE COST 5e+07
+AS $function$
+    SELECT google_ml.inc_call_count_impl(12);
+    SELECT google_ml.generate(prompt => prompt, model_id => model_id);
+$function$;
+
+-- ai.if overrides
+CREATE OR REPLACE FUNCTION ai.if(prompts text[], batch_size integer DEFAULT NULL, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS boolean[]
+ LANGUAGE sql
+ IMMUTABLE PARALLEL SAFE COST 2e+08
+AS $function$
+    SELECT google_ml.inc_call_count_impl(19);
+    SELECT google_ml.if(prompts => prompts, batch_size => batch_size, model_id => model_id);
+$function$;
+
+CREATE OR REPLACE FUNCTION ai.if(prompt text, input_cursor refcursor, batch_size integer DEFAULT NULL, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS refcursor
+ LANGUAGE sql
+ COST 2e+08
+AS $function$
+      SELECT google_ml.inc_call_count_impl(19);
+      SELECT google_ml.if(prompt => prompt, input_cursor => input_cursor, batch_size => batch_size, model_id => model_id);
+$function$;
+
+CREATE OR REPLACE FUNCTION ai.if(prompt text, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS boolean
+ LANGUAGE sql
+ IMMUTABLE PARALLEL SAFE COST 5e+07
+AS $function$
+    SELECT google_ml.inc_call_count_impl(11);
+    SELECT google_ml.if(prompt => prompt, model_id => model_id);
+$function$;
+
+-- ai.rank overrides
+CREATE OR REPLACE FUNCTION ai.rank(prompts text[], batch_size integer DEFAULT NULL, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS real[]
+ LANGUAGE sql
+ IMMUTABLE PARALLEL SAFE COST 2e+08
+AS $function$
+    SELECT google_ml.inc_call_count_impl(21);
+    SELECT google_ml.rank(prompts => prompts, batch_size => batch_size, model_id => model_id);
+$function$;
+
+CREATE OR REPLACE FUNCTION ai.rank(prompt text, input_cursor refcursor, batch_size integer DEFAULT NULL, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS refcursor
+ LANGUAGE sql
+ COST 2e+08
+AS $function$
+      SELECT google_ml.inc_call_count_impl(21);
+      SELECT google_ml.rank(prompt => prompt, input_cursor => input_cursor, batch_size => batch_size, model_id => model_id);
+$function$;
+
+CREATE OR REPLACE FUNCTION ai.rank(prompt text, model_id varchar(100) DEFAULT 'gemini-2.5-flash-lite')
+ RETURNS real
+ LANGUAGE sql
+ IMMUTABLE PARALLEL SAFE COST 5e+07
+AS $function$
+    SELECT google_ml.inc_call_count_impl(13);
+    SELECT google_ml.rank(prompt => prompt, model_id => model_id);
+$function$;
+
 
