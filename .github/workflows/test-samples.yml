@@ -43,6 +43,19 @@ jobs:
         done
         echo "AlloyDB Omni is ready!"
 
+        # Enable ML Agent
+        docker exec -i alloydb-omni psql -U postgres -d postgres -c "ALTER SYSTEM SET omni_enable_ml_agent_process = 'on';"
+        
+        # Restart container to apply GUC
+        docker restart alloydb-omni
+
+        # Wait for DB to be ready again
+        until docker exec alloydb-omni pg_isready -U postgres; do
+          echo "Waiting for AlloyDB Omni after restart..."
+          sleep 2
+        done
+        echo "AlloyDB Omni is ready after restart!"
+
     - name: Run Setup
       run: |
         docker exec -i alloydb-omni psql -U postgres -d postgres < setup.sql
