@@ -18,6 +18,9 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: Debug - Print mock_server.py
+      run: cat mock_server.py
+
     - name: Start Mock Server
       run: |
         python3 mock_server.py > mock_server.log 2>&1 &
