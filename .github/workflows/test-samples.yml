@@ -34,7 +34,7 @@ jobs:
           --add-host=host.docker.internal:host-gateway \
           -e POSTGRES_PASSWORD=postgres \
           -p 5432:5432 \
-          -d gcr.io/alloydb-omni/pg15:latest
+          -d google/alloydbomni:latest
         
         # Wait for DB to be ready
         until docker exec alloydb-omni pg_isready -U postgres; do
