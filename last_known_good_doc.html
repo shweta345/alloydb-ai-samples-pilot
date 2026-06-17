@@ -1,0 +1,790 @@
+<article class="devsite-article">
+
+
+
+
+
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+
+
+    <ul class="devsite-breadcrumb-list"
+
+    aria-label="Breadcrumb">
+
+  <li class="devsite-breadcrumb-item
+             ">
+
+
+
+
+
+  <a href="https://docs.cloud.google.com/"
+
+        class="devsite-breadcrumb-link gc-analytics-event"
+
+        data-category="Site-Wide Custom Events"
+
+        data-label="Breadcrumbs"
+
+        data-value="1"
+
+        track-type="globalNav"
+
+        track-name="breadcrumb"
+
+        track-metadata-position="1"
+
+        track-metadata-eventdetail="Google Cloud Documentation"
+
+    >
+
+          Home
+
+  </a>
+
+
+
+  </li>
+
+  <li class="devsite-breadcrumb-item
+             ">
+
+
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+
+
+
+
+
+  <a href="https://docs.cloud.google.com/docs"
+
+        class="devsite-breadcrumb-link gc-analytics-event"
+
+        data-category="Site-Wide Custom Events"
+
+        data-label="Breadcrumbs"
+
+        data-value="2"
+
+        track-type="globalNav"
+
+        track-name="breadcrumb"
+
+        track-metadata-position="2"
+
+        track-metadata-eventdetail="Documentation"
+
+    >
+
+          Documentation
+
+  </a>
+
+
+
+  </li>
+
+  <li class="devsite-breadcrumb-item
+             ">
+
+
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+
+
+
+
+
+  <a href="https://docs.cloud.google.com/docs/databases"
+
+        class="devsite-breadcrumb-link gc-analytics-event"
+
+        data-category="Site-Wide Custom Events"
+
+        data-label="Breadcrumbs"
+
+        data-value="3"
+
+        track-type="globalNav"
+
+        track-name="breadcrumb"
+
+        track-metadata-position="3"
+
+        track-metadata-eventdetail="Databases"
+
+    >
+
+          Databases
+
+  </a>
+
+
+
+  </li>
+
+  <li class="devsite-breadcrumb-item
+             ">
+
+
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+
+
+
+
+
+  <a href="https://docs.cloud.google.com/alloydb/docs"
+
+        class="devsite-breadcrumb-link gc-analytics-event"
+
+        data-category="Site-Wide Custom Events"
+
+        data-label="Breadcrumbs"
+
+        data-value="4"
+
+        track-type="globalNav"
+
+        track-name="breadcrumb"
+
+        track-metadata-position="4"
+
+        track-metadata-eventdetail="AlloyDB for PostgreSQL"
+
+    >
+
+          AlloyDB for PostgreSQL
+
+  </a>
+
+
+
+  </li>
+
+  <li class="devsite-breadcrumb-item
+             ">
+
+
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+
+
+
+
+
+  <a href="https://docs.cloud.google.com/alloydb/docs/overview"
+
+        class="devsite-breadcrumb-link gc-analytics-event"
+
+        data-category="Site-Wide Custom Events"
+
+        data-label="Breadcrumbs"
+
+        data-value="5"
+
+        track-type="globalNav"
+
+        track-name="breadcrumb"
+
+        track-metadata-position="5"
+
+        track-metadata-eventdetail=""
+
+    >
+
+          Guides
+
+  </a>
+
+
+
+  </li>
+
+</ul>
+
+
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+
+
+  </div>
+
+    <devsite-feedback
+  position="header"
+  project-name="AlloyDB for PostgreSQL"
+  product-id="82040"
+  bucket="documentation"
+  context="AlloyDB for PostgreSQL docs feedback link"
+  version="t-devsite-webserver-20260611-r00-rc01.478231180072776223"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+
+
+    project-feedback-url="https://issuetracker.google.com/issues/new?component=1194552"
+
+
+
+      project-icon="https://docs.cloud.google.com/_static/clouddocs/images/icons/products/alloydb-color.svg"
+
+
+
+
+  >
+
+  <button>
+
+
+    Send feedback
+
+  </button>
+</devsite-feedback>
+
+    <h1 class="devsite-page-title" tabindex="-1">
+      Perform intelligent SQL queries using AI functions<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+
+      dismiss-button-text="Dismiss"
+
+
+      close-button-text="Got it">
+
+
+
+      <devsite-bookmark></devsite-bookmark>
+
+
+    <span slot="popout-heading">
+
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+
+
+    </h1>
+
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+
+
+  <div class="devsite-article-body clearfix
+  ">
+
+
+
+
+
+
+
+
+<p>AlloyDB AI functions integrate Large Language Models (LLMs) like
+Gemini directly with your AlloyDB for PostgreSQL data to perform intelligent data
+operations. This feature includes built-in functions for the following:</p>
+
+<ul>
+<li>Filtering (<code translate="no" dir="ltr">ai.if</code>)</li>
+<li>Semantic ranking (<code translate="no" dir="ltr">ai.rank</code>)</li>
+<li>Text generation (<code translate="no" dir="ltr">ai.generate</code>)</li>
+</ul>
+
+<p>These AI functions use the AlloyDB AI query engine to help your
+application process data using artificial intelligence models at various scales,
+from single-row responses to large-scale database operations. You can use the
+<code translate="no" dir="ltr">ai.if</code>, <code translate="no" dir="ltr">ai.rank</code>, and <code translate="no" dir="ltr">ai.generate</code> operators to combine
+natural language with SQL queries. AlloyDB AI reserves and creates the
+<a href="/alloydb/docs/reference/model-endpoint"><code translate="no" dir="ltr">ai</code></a> schema.</p>
+<aside class="note"><strong>Note:</strong><span> Using AI functions with your database can result in charges for
+processing and model token usage.</span></aside>
+<p>There are three categories of AI functions which differ based on
+how they handle input data and memory allocation: scalar, array-based,
+and cursor functions. Choosing the right AI function depends on the scale of
+your data and your performance requirements. Use the following table to learn
+about these functions and their use cases:</p>
+
+<table>
+  <tr>
+    <td><p><strong>Category</strong></p></td>
+    <td><p><strong>Description</strong></p></td>
+    <td><p><strong>Recommended use case</strong></p></td>
+  </tr>
+  <tr>
+    <td><p>Scalar</p></td>
+    <td><p>Designed for basic, one-to-one processing. Takes a single input and returns a single output.</p></td>
+    <td><p>Use when you want a basic function that provides acceptable performance
+    for queries that make a small number&mdash;less than 50&mdash;of scalar function calls.</p></td>
+  </tr>
+  <tr>
+    <td><p>Array-based</p></td>
+    <td><p>Processes data as an array of rows in a single function call. Takes an array as input and returns array as output.</p></td>
+    <td><p>Use for small-to-medium datasets where the entire array of eligible rows can fit within memory limits. This provides high throughput for set-based operations.</p></td>
+  </tr>
+  <tr>
+    <td><p>Cursor</p></td>
+    <td><p>Takes a cursor as input and returns a cursor as output.</p></td>
+    <td><p>Use for processing large numbers of rows–for example, 10,000 rows.</p></td>
+  </tr>
+</table>
+
+<h2 id="before-you-begin" data-text="Before you begin" tabindex="-1">Before you begin</h2>
+
+<ul>
+<li><a href="/alloydb/docs/ai/configure-vertex-ai#verify-installed-extension">Verify that the <code translate="no" dir="ltr">google_ml_integration</code> extension is installed</a>
+and that you&#39;re using version 1.5.2 or later. To obtain further performance
+benefits with array-based functions, use version 1.5.4 or later.</li>
+<li><a href="/alloydb/docs/instance-configure-database-flags">Verify that the <code translate="no" dir="ltr">google_ml_integration.enable_ai_query_engine</code> flag is set to <code translate="no" dir="ltr">on</code></a>.</li>
+<li><a href="/alloydb/docs/ai/configure-vertex-ai">Integrate with Gemini Enterprise Agent Platform</a>.</li>
+<li><a href="#use-gemini-model">Use a Gemini model that&#39;s supported in your region</a>.
+<a href="/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite">Gemini 2.5 Flash Lite</a>
+is the AI query engine&#39;s default model. If you don&#39;t specify a
+Gemini model in the query, the AI query engine default model is
+chosen for the queries.</li>
+</ul>
+
+<h3 id="integrate-with-agent-platform" data-text="Integrate with Agent Platform and install the extension" tabindex="-1">Integrate with Agent Platform and install the extension</h3>
+
+
+
+<ol>
+<li> <a href="/alloydb/docs/ai/configure-vertex-ai">Configure user access to Agent Platform models</a>.</li>
+<li>Verify that the latest version of <code translate="no" dir="ltr">google_ml_integration</code> is installed.
+    <ol>
+     <li><p>To check the installed version, run the following
+        command:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">extversion</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">pg_extension</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">WHERE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">extname</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'google_ml_integration'</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-n">extversion</span><span class="devsite-syntax-w"> </span>
+<span class="devsite-syntax-c1">------------</span>
+<span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-mi">5</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-mi">2</span>
+<span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">row</span><span class="devsite-syntax-p">)</span></pre></devsite-code>
+      </li>
+      <li><p>If the extension isn't installed or if the installed version is
+      earlier than 1.5.2, update the extension.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><span class="devsite-syntax-k">CREATE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">EXTENSION</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">IF</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NOT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">EXISTS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">google_ml_integration</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-k">ALTER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">EXTENSION</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">google_ml_integration</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">UPDATE</span><span class="devsite-syntax-p">;</span></pre></devsite-code>
+      <p>If you experience issues when you run the preceding commands, or if the
+        extension isn't updated to version 1.5.2 after you run the preceding
+        commands, contact <a href="https://cloud.google.com/support">Google Cloud support</a>.</p>
+      </li>
+    </ol>
+      <li><p>To use the AlloyDB AI query engine functionality, set the
+        <code translate="no" dir="ltr">google_ml_integration.enable_ai_query_engine</code> flag to <code translate="no" dir="ltr">on</code>.</p>
+        <div class="ds-selector-tabs">
+          <section>
+             <h3 id="sql" data-text="SQL" tabindex="-1">SQL</h3>
+             <ol><li>Enable the AI query engine for the current session.<br>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><span class="devsite-syntax-k">SET</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">google_ml_integration</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">enable_ai_query_engine</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">on</span><span class="devsite-syntax-p">;</span></pre></devsite-code>
+                </li>
+            <li>Enable features for a specific database across sessions.<br>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><span class="devsite-syntax-k">ALTER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">DATABASE</span><span class="devsite-syntax-w"> </span><var translate="no"><span class="devsite-syntax-n">DATABASE_NAME</span></var><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">SET</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">google_ml_integration</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">enable_ai_query_engine</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'on'</span><span class="devsite-syntax-p">;</span></pre></devsite-code>
+            </li>
+            <li>Enable the AI query engine for a specific user across sessions and databases.<br>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><span class="devsite-syntax-k">ALTER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">ROLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">postgres</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">SET</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">google_ml_integration</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">enable_ai_query_engine</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'on'</span><span class="devsite-syntax-p">;</span></pre></devsite-code>
+            </li></ol>
+          </section>
+          <section>
+           <h3 id="console" data-text="Console" tabindex="-1">Console</h3>
+            <p>To modify the value of the <code translate="no" dir="ltr">google_ml_integration.enable_ai_query_engine</code> flag, follow the steps
+             in <a href="/alloydb/docs/instance-configure-database-flags#console">Configure an instance's database flags</a>.
+              </p></section>
+          <section>
+            <h3 id="gcloud" data-text="gcloud" tabindex="-1">gcloud</h3>
+            <p>
+<p>To use the gcloud CLI, you can
+<a href="/sdk/docs/install">install and initialize</a> the Google Cloud CLI, or you
+can use <a href="/shell/docs/using-cloud-shell">Cloud Shell</a>.</p>
+</p>
+            <p>You can modify the value of the <code translate="no" dir="ltr">google_ml_integration.enable_ai_query_engine</code> flag.
+             For more information, see <a href="/alloydb/docs/instance-configure-database-flags#console">Configure an instance's database flags</a>.
+             </p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash Session"><span class="devsite-syntax-go">gcloud alloydb instances update <var translate="no">INSTANCE_ID</var> \</span>
+<span class="devsite-syntax-go">  --database-flags google_ml_integration.enable_ai_query_engine=on \</span>
+<span class="devsite-syntax-go">  --region=<var translate="no">REGION_ID</var> \</span>
+<span class="devsite-syntax-go">  --cluster=<var translate="no">CLUSTER_ID</var> \</span>
+<span class="devsite-syntax-go">  --project=<var translate="no">PROJECT_ID</span></var></pre></devsite-code>
+          </section>
+        </div>
+    </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="use-gemini-model" data-text="Use a Gemini model that's supported in your region" tabindex="-1">Use a Gemini model that's supported in your region</h3>
+
+<p>If your AlloyDB for PostgreSQL cluster is in a region where <code translate="no" dir="ltr">gemini-2.5-flash-lite</code>
+isn&#39;t supported, you can use one of the other available Gemini models
+in your region using the <code translate="no" dir="ltr">model_id parameter</code>.</p>
+<aside class="note"><strong>Note:</strong><span> Verify model availability in your region. For more information, see
+<a href="/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite">Gemini 2.5 Flash Lite</a>.</span></aside>
+<p>Alternatively, you can register a Gemini model endpoint and
+provide that model ID to the AI operators. For more information, see
+<a href="/alloydb/docs/ai/register-model-endpoint">Register and call remote AI models using model endpoint management</a>.</p>
+
+<p>The following example shows how to register another Gemini
+endpoint. In this example, this second Gemini endpoint is the
+global endpoint for <code translate="no" dir="ltr">gemini-2.5-flash-lite</code>. You can use this registered model
+with AI operators by passing <code translate="no" dir="ltr">model_id =&gt; &#39;gemini-2.5-flash-lite-global&#39;</code> as an
+additional argument.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">CALL</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">google_ml</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">create_model</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-2.5-flash-lite-global'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_type</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'llm'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_provider</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'google'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_qualified_name</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-2.5-flash-lite'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_request_url</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'https://aiplatform.googleapis.com/v1/projects/<var translate="no">PROJECT_ID</var>/locations/global/publishers/google/models/gemini-2.5-flash-lite:generateContent'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_auth_type</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'alloydb_service_agent_iam'</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h4 id="use-gemini-model-3" data-text="Use Gemini 3.0 models" tabindex="-1">Use Gemini 3.0 models</h4>
+
+<p>Some Gemini models, such as <code translate="no" dir="ltr">gemini-3.0-pro-preview</code>, are available only through the global endpoint. You must register such models as follows:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">CALL</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">google_ml</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">create_model</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3-preview-model'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_request_url</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'https://aiplatform.googleapis.com/v1/projects/<var translate="no">PROJECT_ID</var>/locations/global/publishers/google/models/gemini-3-pro-preview:generateContent'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_qualified_name</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3-pro-preview'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_provider</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'google'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_type</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'llm'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">model_auth_type</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'alloydb_service_agent_iam'</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<p>Replace <code translate="no" dir="ltr"><var translate="no">PROJECT_ID</var></code> with the ID of the project where the
+Agent Platform model is available. The
+AlloyDB service account must have the <a href="/vertex-ai/docs/general/access-control#predefined-roles">Vertex AI User Role</a> in
+that project.</p>
+
+<p>After registering the model, you can use it in AI functions as follows:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">generate</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'What is AlloyDB?'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3-preview-model'</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h2 id="filters-queries" data-text="Use filters in your queries" tabindex="-1">Use filters in your queries</h2>
+
+<p>AlloyDB AI offers AI-powered SQL functions that let you
+use natural language processing and LLMs directly
+within your database queries, including the <code translate="no" dir="ltr">ai.if</code> and <code translate="no" dir="ltr">ai.rank</code> operators.</p>
+<aside class="note"><strong>Note:</strong><span> if you don&#39;t specify a batch size in your queries, the default batch size is 10.</span></aside>
+<h3 id="filters-scalar" data-text="Perform filtering using scalar functions" tabindex="-1">Perform filtering using scalar functions</h3>
+
+<p>To evaluate whether a condition stated in natural language is met, use the
+<code translate="no" dir="ltr">ai.if</code>/<code translate="no" dir="ltr">google_ml.if</code> operator. The function returns boolean true or false
+value, and returns <code translate="no" dir="ltr">false</code> if the output isn&#39;t clearly detected.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded><code translate="no" dir="ltr">- Function signature
+FUNCTION ai.if(prompt TEXT, model_id VARCHAR(100) DEFAULT NULL) RETURNS bool
+</code></pre></devsite-code>
+<p>The following example shows the use of the <code translate="no" dir="ltr">ai.if</code> operator as a filter to find
+restaurants with more than 500 positive reviews located in cities with a
+population greater than 100,000. The example uses <code translate="no" dir="ltr">restaurant_reviews</code> and
+contains data like reviews and city location. The <code translate="no" dir="ltr">ai.if</code> operator helps you
+understand the review sentiment and combine
+the locations from the database with Gemini general knowledge
+about the population in these locations.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">location_city</span>
+<span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">restaurant_reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span>
+<span class="devsite-syntax-k">WHERE</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">AI</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">IF</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">location_city</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">' has a population OF more than 100,000 AND the following is a positive review; Review: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-k">GROUP</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">location_city</span>
+<span class="devsite-syntax-k">HAVING</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">COUNT</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-o">*</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> &gt; </span><span class="devsite-syntax-mi">500</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<p>The following shows the same example using the model that you registered in
+<a href="#use-gemini-model">Use a Gemini model that&#39;s supported in your region</a>.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">location_city</span>
+<span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">restaurant_reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span>
+<span class="devsite-syntax-k">WHERE</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">AI</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">IF</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">location_city</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">' has a population of more than 100,000 AND the following is a positive review; Review: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-2.5-flash-lite'</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-k">GROUP</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">location_city</span>
+<span class="devsite-syntax-k">HAVING</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">COUNT</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-o">*</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> &gt; </span><span class="devsite-syntax-mi">500</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h3 id="join-with-if-operator" data-text="Perform a join on a query that uses the if operator" tabindex="-1">Perform a join on a query that uses the if operator</h3>
+
+<p>To perform a join operation, use the <code translate="no" dir="ltr">ai.if</code>/<code translate="no" dir="ltr">google_ml.if</code> operator with join.
+The following sample query finds the number of reviews that mention each menu
+item from the restaurant menu.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">item_name</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">COUNT</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-o">*</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">menu_items</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">JOIN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">ON</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Does the following user review talk about the menu item mentioned ? review: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review_text</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">' menu item: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">item_name</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">GROUP</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">item_name</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h3 id="filter-batch-arrays" data-text="Perform filtering using array-based functions" tabindex="-1">Perform filtering using array-based functions</h3>
+
+<p>The following example identifies restaurants with more than 10 positive
+reviews by using an AI model (<code translate="no" dir="ltr">gemini-2.5-flash-lite</code>) to analyze
+review sentiment and filter the results. <code translate="no" dir="ltr">ARRAY_AGG</code> is used to transform
+individual rows of data into structured arrays so they can be processed
+by the AI model in bulk rather than one row at a time.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">WITH</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">initial_arrays</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">SELECT</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">ARRAY_AGG</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">ORDER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review_ids</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">-- Assuming ai.if takes an array of prompts and returns a boolean array</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">prompts</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ARRAY_AGG</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Is the review positive: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">ORDER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-p">),</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-2.5-flash-lite'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">batch_size</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">20</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">truth_values</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">restaurant_reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span>
+<span class="devsite-syntax-p">),</span>
+<span class="devsite-syntax-n">reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-k">SELECT</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">initial_arrays</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review_ids</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-n">i</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review_id</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">initial_arrays</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">truth_values</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-n">i</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">truth_value</span>
+<span class="devsite-syntax-k">FROM</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">initial_arrays</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">generate_series</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">array_length</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">initial_arrays</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review_ids</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">))</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">i</span>
+<span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rest_review</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">city</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rest_review</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">name</span>
+<span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">restaurant_reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rest_review</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">JOIN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">ON</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rest_review</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review_id</span>
+<span class="devsite-syntax-k">WHERE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">truth_value</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'t'</span>
+<span class="devsite-syntax-k">GROUP</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rest_review</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">city</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rest_review</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">name</span>
+<span class="devsite-syntax-k">HAVING</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">COUNT</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-o">*</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> &gt; </span><span class="devsite-syntax-mi">10</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h3 id="filter-cursors" data-text="Perform filtering using cursors" tabindex="-1">Perform filtering using cursors</h3>
+
+<p>The following example shows how to filter a large set of restaurant
+reviews by streaming them through a cursor.</p>
+<aside class="note"><strong>Note:</strong><span> if you don&#39;t specify a batch size, the default batch size is 10.</span></aside><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">CREATE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">TABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">filtered_results</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">input</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">text</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">result</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">bool</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-k">DO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">$$</span>
+<span class="devsite-syntax-k">DECLARE</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">result_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">RECORD</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-k">BEGIN</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">-- 1. Open a cursor for the input data</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">OPEN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FOR</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">location_city</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">' has a population of &gt; 100,000 and is a positive review; Review: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">review</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">restaurant_reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">r</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">-- 2. Call the array-based function using the input cursor</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">result_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-s1">'Is the given statement true? '</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-2.5-flash-lite'</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">-- 3. Fetch results from the output cursor and store them</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">LOOP</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">FETCH</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">result_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">INTO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">EXIT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">WHEN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NOT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FOUND</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">INSERT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">INTO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">filtered_results</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">VALUES</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">input</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">output</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">END</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">LOOP</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">CLOSE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">result_cursor</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-k">END</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">$$</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h2 id="text-generation-summarization" data-text="Text generation and summarization" tabindex="-1">Text generation and summarization</h2>
+
+<p>AlloyDB AI offers text generation operators like scalar
+<code translate="no" dir="ltr">ai.generate</code> and array-based and cursor-based <code translate="no" dir="ltr">ai.generate</code>.</p>
+
+<h3 id="text-generation-scalar" data-text="Perform text generation using scalar functions" tabindex="-1">Perform text generation using scalar functions</h3>
+
+<p>The <code translate="no" dir="ltr">ai.generate</code> function produces text by combining provided data with the
+user&#39;s prompt.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">-- Function Signature</span>
+<span class="devsite-syntax-k">FUNCTION</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">generate</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">TEXT</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">VARCHAR</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">100</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">DEFAULT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NULL</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">RETURNS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">TEXT</span>
+</code></pre></devsite-code>
+<p>For example, you can use the following query to generate a concise summary of
+each user review.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">SELECT</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">generate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Summarize the review in 20 words or less. Review: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review_summary</span>
+<span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h3 id="text-generation-batch-arrays" data-text="Perform text generation using array-based functions" tabindex="-1">Perform text generation using array-based functions</h3>
+
+<p>The following query uses <code translate="no" dir="ltr">UNNEST</code> and <code translate="no" dir="ltr">ai.generate</code> to summarize multiple reviews
+efficiently.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">SELECT</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">UNNEST</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">generate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">prompts</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ARRAY_AGG</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Summarize the review in 20 words or less. Review: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">),</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-2.5-flash-lite'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review_summary</span>
+<span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h3 id="text-generation-cursors" data-text="Perform text generation using cursors" tabindex="-1">Perform text generation using cursors</h3>
+
+<p>To generate summaries or translations for millions of rows without hitting memory
+bottlenecks, use batch generation with cursors.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">CREATE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">TABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">summary_results</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">summary</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">text</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-k">DO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">$$</span>
+<span class="devsite-syntax-k">DECLARE</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">summary_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">RECORD</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-k">BEGIN</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">OPEN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FOR</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review_text</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">ORDER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">summary_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">generate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-s1">'Summarize the review in 20 words or less. Review:'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">LOOP</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">FETCH</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">summary_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">INTO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">EXIT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">WHEN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NOT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FOUND</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">INSERT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">INTO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">summary_results</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">VALUES</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">output</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">END</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">LOOP</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">CLOSE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">summary_cursor</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-k">END</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">$$</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h2 id="score-query-results" data-text="Score your query results" tabindex="-1">Score your query results</h2>
+
+<p>If you need to sort query results using custom, natural language instructions,
+use the <code translate="no" dir="ltr">ai.rank</code> operator.</p>
+
+<h3 id="score-scalar" data-text="Perform scoring using scalar functions" tabindex="-1">Perform scoring using scalar functions</h3>
+
+<p>The following function lets you provide a prompt which
+describes the ranking criteria and returns a score for each item.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">-- Function signature</span>
+<span class="devsite-syntax-k">FUNCTION</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">rank</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">TEXT</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">VARCHAR</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">100</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">DEFAULT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NULL</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">RETURNS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">real</span>
+</code></pre></devsite-code>
+<p>For example, the following query gets the top 20 most positive restaurant
+reviews, using scores from an LLM.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">AS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">top20</span>
+<span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span>
+<span class="devsite-syntax-k">ORDER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">rank</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'Score the following review according to these rules:</span>
+<span class="devsite-syntax-s1">  (1) Score OF 8 to 10 IF the review says the food IS excellent.</span>
+<span class="devsite-syntax-s1">  (2) 4 to 7 IF the review says the food is ok.</span>
+<span class="devsite-syntax-s1">  (3) 1 to 3 IF the review says the food is not good. Here is the review:'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">DESC</span>
+<span class="devsite-syntax-k">LIMIT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">20</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h3 id="score-batch-arrays" data-text="Perform scoring using array-based functions" tabindex="-1">Perform scoring using array-based functions</h3>
+
+<p>This <code translate="no" dir="ltr">ai.rank</code> function lets you score and rank query results based on custom
+natural language instructions.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">FUNCTION</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">rank</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">prompts</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">TEXT</span><span class="devsite-syntax-p">[],</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">VARCHAR</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">100</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">DEFAULT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NULL</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">RETURNS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">real</span><span class="devsite-syntax-p">[]</span>
+</code></pre></devsite-code>
+<p>The following query uses <code translate="no" dir="ltr">UNNEST</code> and <code translate="no" dir="ltr">ai.rank</code> to score multiple reviews
+efficiently.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">SELECT</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">UNNEST</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">rank</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">ARRAY_AGG</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Score the following review according to these rules:</span>
+<span class="devsite-syntax-s1">  (1) Score OF 8 to 10 IF the review says the food IS excellent.</span>
+<span class="devsite-syntax-s1">  (2) 4 to 7 IF the review says the food is ok.</span>
+<span class="devsite-syntax-s1">  (3) 1 to 3 IF the review says the food is not good. Here is the review:'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-p">),</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">as</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review_scores</span>
+<span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h3 id="score-cursors" data-text="Perform scoring using cursors" tabindex="-1">Perform scoring using cursors</h3>
+
+<p>This function is used for scoring large datasets without hitting memory limits.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">FUNCTION</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">rank</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">context</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">TEXT</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">input_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">model_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">VARCHAR</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">100</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">DEFAULT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NULL</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">RETURNS</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span>
+</code></pre></devsite-code>
+<p>The following example shows you how to score large volumes of text according to
+specific natural language criteria.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="SQL"><code translate="no" dir="ltr"><span class="devsite-syntax-k">CREATE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">TABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">scored_results</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">input</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">text</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">score</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">real</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-k">DO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">$$</span>
+<span class="devsite-syntax-k">DECLARE</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">score_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">REFCURSOR</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">RECORD</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-k">BEGIN</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">OPEN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FOR</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">SELECT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">review</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FROM</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">user_reviews</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">ORDER</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">BY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">score_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">rank</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-s1">'Score the following review: (1) 8-10 if excellent, (2) 4-7 if ok, (3) 1-3 if not good. Review:'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">prompt_cursor</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">LOOP</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">FETCH</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">score_cursor</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">INTO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">EXIT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">WHEN</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">NOT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">FOUND</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">INSERT</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">INTO</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">scored_results</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">VALUES</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">input</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">rec</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">output</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">END</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">LOOP</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">CLOSE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">score_cursor</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-k">END</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">$$</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code>
+<h2 id="whats-next" data-text="What's next" tabindex="-1">What's next</h2>
+
+<ul>
+<li><p><a href="/alloydb/docs/ai/register-model-endpoint">Register a model endpoint with model endpoint management</a>.</p></li>
+<li><p><a href="/alloydb/docs/ai/rank-rerank-search-results-rag">Rank and score search results for RAG</a>.</p></li>
+<li><p><a href="https://codelabs.developers.google.com/alloydb-ai-operators">Semantically filter SQL queries and rank results</a>.</p></li>
+<li><p><a href="/alloydb/docs/ai/perform-time-series-forecasting">Perform time-series forecasting</a>.</p></li>
+<li><p><a href="/alloydb/docs/ai/accelerate-ai-queries">Accelerate queries with AI functions</a>.</p></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+
+
+         <devsite-feedback
+  position="footer"
+  project-name="AlloyDB for PostgreSQL"
+  product-id="82040"
+  bucket="documentation"
+  context="AlloyDB for PostgreSQL docs feedback link"
+  version="t-devsite-webserver-20260611-r00-rc01.478231180072776223"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+
+
+    project-feedback-url="https://issuetracker.google.com/issues/new?component=1194552"
+
+
+
+      project-icon="https://docs.cloud.google.com/_static/clouddocs/images/icons/products/alloydb-color.svg"
+
+
+
+
+  >
+
+  <button>
+
+
+    Send feedback
+
+  </button>
+</devsite-feedback>
+
+
+
+
+
+  <div class="devsite-floating-action-buttons"></div></article>
