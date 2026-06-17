@@ -217,15 +217,14 @@ CREATE TABLE IF NOT EXISTS user_reviews (
 TRUNCATE restaurant_reviews, menu_items, user_reviews CASCADE;
 
 INSERT INTO restaurant_reviews (name, location_city, review) VALUES
-('Apple Cafe', 'Apple City', 'Is apple a fruit or a vegetable? Yes, it is excellent.'),
-('Carrot Bistro', 'Carrot Town', 'Is carrot a fruit or a vegetable? Yes, it is ok.');
+('Apple Cafe', 'Apple City', 'The apple pie was excellent and very tasty.'),
+('Carrot Bistro', 'Carrot Town', 'The carrot cake was ok, but a bit dry.');
 
 INSERT INTO menu_items (item_name) VALUES
 ('apple'),
 ('carrot');
 
 INSERT INTO user_reviews (review_text, review) VALUES
-('Is apple a fruit?', 'Is apple a fruit?'),
-('Is carrot a fruit?', 'Is carrot a fruit?'),
-('Score apple on a scale of 0 to 1', 'Score apple on a scale of 0 to 1'),
-('Score carrot on a scale of 0 to 1', 'Score carrot on a scale of 0 to 1');
+('The apple pie was excellent and very tasty.', 'The apple pie was excellent and very tasty.'),
+('The carrot cake was ok, but a bit dry.', 'The carrot cake was ok, but a bit dry.'),
+('The service was terrible and the food was cold.', 'The service was terrible and the food was cold.');
