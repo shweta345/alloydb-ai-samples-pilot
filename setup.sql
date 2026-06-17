@@ -57,13 +57,35 @@ CALL google_ml.create_model(
     model_out_transform_fn => 'google_ml.openai_text_embedding_output_transform'
 );
 
+-- Create fake secret for batch LLM
+CALL google_ml.create_sm_secret(
+    secret_id => 'fake_secret_id',
+    secret_path => 'projects/fake-project/secrets/fake-secret/versions/1'
+);
+
+-- Create fake header function to bypass secret manager call in ml-agent
+CREATE OR REPLACE FUNCTION google_ml.fake_gemini_headers(
+    model_id character varying,
+    prompts text[],
+    generation_config json,
+    system_instructions json
+)
+RETURNS json
+LANGUAGE sql
+AS $$
+  SELECT '{"Authorization": "FakeToken"}'::json;
+$$;
+
 -- Register gemini-2.5-flash-lite mock
 CALL google_ml.create_model(
     model_id => 'gemini-2.5-flash-lite',
     model_request_url => 'http://host.docker.internal:8080/vertexai/gemini-2.5-flash-lite',
     model_provider => 'custom',
     model_type => 'llm',
-    model_auth_type => NULL,
+    model_qualified_name => 'gemini-2.5-flash-lite',
+    model_auth_type => 'secret_manager',
+    model_auth_id => 'fake_secret_id',
+    generate_headers_fn => 'google_ml.fake_gemini_headers',
     model_in_transform_fn => 'google_ml.gemini_llm_input_transform',
     model_out_transform_fn => 'google_ml.gemini_llm_output_transform',
     model_batch_in_transform_fn => 'google_ml.gemini_llm_batch_input_transform',
