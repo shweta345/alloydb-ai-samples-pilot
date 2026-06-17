@@ -64,7 +64,7 @@ CALL google_ml.create_sm_secret(
 );
 
 -- Create fake header function to bypass secret manager call in ml-agent
--- Batch version (called by batch_array_async)
+-- Batch version
 CREATE OR REPLACE FUNCTION google_ml.fake_gemini_headers(
     model_id character varying,
     prompts text[],
@@ -77,7 +77,7 @@ AS $$
   SELECT '{"Authorization": "FakeToken"}'::json;
 $$;
 
--- Scalar version (called by llm_expr)
+-- Scalar version
 CREATE OR REPLACE FUNCTION google_ml.fake_gemini_headers(
     model_id character varying,
     prompt text,
@@ -194,3 +194,38 @@ AS $function$
 $function$;
 
 
+-- Provision tables and dummy data for documentation examples
+CREATE TABLE IF NOT EXISTS restaurant_reviews (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    location_city VARCHAR(100),
+    review TEXT
+);
+
+CREATE TABLE IF NOT EXISTS menu_items (
+    id SERIAL PRIMARY KEY,
+    item_name VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS user_reviews (
+    id SERIAL PRIMARY KEY,
+    review_text TEXT,
+    review TEXT
+);
+
+-- Truncate to ensure clean run
+TRUNCATE restaurant_reviews, menu_items, user_reviews CASCADE;
+
+INSERT INTO restaurant_reviews (name, location_city, review) VALUES
+('Apple Cafe', 'Apple City', 'Is apple a fruit or a vegetable? Yes, it is excellent.'),
+('Carrot Bistro', 'Carrot Town', 'Is carrot a fruit or a vegetable? Yes, it is ok.');
+
+INSERT INTO menu_items (item_name) VALUES
+('apple'),
+('carrot');
+
+INSERT INTO user_reviews (review_text, review) VALUES
+('Is apple a fruit?', 'Is apple a fruit?'),
+('Is carrot a fruit?', 'Is carrot a fruit?'),
+('Score apple on a scale of 0 to 1', 'Score apple on a scale of 0 to 1'),
+('Score carrot on a scale of 0 to 1', 'Score carrot on a scale of 0 to 1');
